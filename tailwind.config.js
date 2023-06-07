@@ -1,3 +1,5 @@
+const { transform } = require('typescript')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,9 +13,22 @@ module.exports = {
       mono: '[var(--font-ubuntu)]',
     },
 
-    // backgroundImage: {
-    //   'white-shark': "url('/src/assets/white-shark.jpg')",
-    // },
+    animation: {
+      'bg-move': 'bg-move 1s ease-out',
+    },
+
+    keyframes: {
+      'bg-move': {
+        '0%': {
+          'background-position': '-40% 50%',
+          'background-size': '120%',
+        },
+        '100%': {
+          'background-position': '0 50%',
+          'background-size': '100%',
+        },
+      },
+    },
 
     colors: {
       transparent: 'transparent',

@@ -1,8 +1,6 @@
-import { Suspense } from 'react'
 import { Ubuntu, Roboto } from 'next/font/google'
 
 import Header from '@/components/commons/header'
-import Loading from './loading'
 
 import './globals.css'
 
@@ -33,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} ${ubuntu.className}`}>
-        <section className="h-[100vh] w-full">
+        <section className="h-[100vh] w-full overflow-hidden bg-blue-900 relative">
           <Header />
           <main>{children}</main>
         </section>

@@ -14,3 +14,7 @@
 .animate {
   animation: scroll 16s linear infinite;
 }
+
+.stroke-text {
+  -webkit-text-stroke: 3px #cae4e6;
+}
